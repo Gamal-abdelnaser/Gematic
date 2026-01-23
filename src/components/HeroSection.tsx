@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaTiktok } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
@@ -118,10 +118,10 @@ const HeroSection = () => {
               className="flex items-center justify-center lg:justify-start gap-4"
             >
               {[
-                { icon: <FaGithub size={30} />, href: 'https://www.linkedin.com/in/gamal-abdelnaser-2b9b38311/', label: 'GitHub' },
-                { icon: <FaLinkedin size={30} />, href: 'https://linkedin.com', label: 'LinkedIn' },
+                { icon: <FaGithub size={30} />, href: 'https://github.com/Gamal-abdelnaser', label: 'GitHub' },
+                { icon: <FaLinkedin size={30} />, href: 'https://www.linkedin.com/in/gamal-abdelnaser-2b9b38311/', label: 'LinkedIn' },
                 { icon: <FaInstagram size={30} />, href: 'https://www.instagram.com/gematic2/', label: 'intagram' },
-                // { icon: <Mail size={30} />, href: 'alawljmal9@gmail.com', label: 'Email' },
+                 { icon: <FaTiktok size={30} />, href: 'https://www.tiktok.com/@gamatic2', label: 'tiktok' },
               ].map((social) => (
                 <motion.a
                   key={social.label}

@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaTiktok } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
@@ -124,10 +124,10 @@ const ContactSection = () => {
                   className="flex items-center justify-center lg:justify-start gap-4"
                 >
                   {[
-                    { icon: <FaGithub size={20} />, href: 'https://www.linkedin.com/in/gamal-abdelnaser-2b9b38311/', label: 'GitHub' },
-                    { icon: <FaLinkedin size={20} />, href: 'https://linkedin.com', label: 'LinkedIn' },
+                    { icon: <FaGithub size={20} />, href: 'https://github.com/Gamal-abdelnaser', label: 'GitHub' },
+                    { icon: <FaLinkedin size={20} />, href: 'https://www.linkedin.com/in/gamal-abdelnaser-2b9b38311/', label: 'LinkedIn' },
                     { icon: <FaInstagram size={20} />, href: 'https://www.instagram.com/gematic2/', label: 'intagram' },
-                    // { icon: <Mail size={30} />, href: 'alawljmal9@gmail.com', label: 'Email' },
+                     { icon: <FaTiktok size={30} />, href: 'https://www.tiktok.com/@gamatic2', label: 'tiktok' },
                   ].map((social) => (
                     <motion.a
                       key={social.label}
@@ -148,7 +148,7 @@ const ContactSection = () => {
           </motion.div>
 
           {/* Contact Form */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -228,7 +228,7 @@ const ContactSection = () => {
                 </Button>
               </div>
             </form>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </section>

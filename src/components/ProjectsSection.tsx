@@ -198,8 +198,8 @@ const ProjectsSection = () => {
               <span className="gradient-text">built</span>
             </h2>
           </div>
-          <Button variant="outline" asChild>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <Button variant="outline" asChild >
+            <a href="https://github.com/Gamal-abdelnaser" target="_blank" rel="noopener noreferrer" className='bg-primary hover:bg-slate-800'>
               View All on GitHub
               <ArrowUpRight className="ml-2 h-4 w-4" />
             </a>
