@@ -7,6 +7,7 @@ import ali from "../assets/ali.png"
 import modivo from "../assets/modivo.png"
 import calculator from "../assets/calculator.png"
 import elevate from "../assets/elevate.png"
+import beshwy from "../assets/beshoy.png"
 const projects = [
   {
     title: 'Elevate Fitness Platform',
@@ -49,6 +50,17 @@ const projects = [
     githubUrl: 'https://github.com/Gamal-abdelnaser/investment-calculator',
     featured: true,
   },
+  {
+    title: 'Beshwy – Graphic Design Portfolio',
+    description:
+      'A visual branding project for Beshwy, focusing on graphic design, social media visuals, and brand identity. The project highlights creative layouts, color harmony, and visual storytelling tailored for digital platforms.',
+    image: beshwy, // اسم الصورة عندك
+    tags: ['Graphic Design', 'Brand Identity', 'Social Media Design', 'Visual Design'],
+    liveUrl: 'https://beshoy-magdy.netlify.app', // لو مجرد showcase
+    githubUrl: '', // ممكن تشيله لو مش كود
+    featured: false,
+  },
+
   {
     title: 'E-Commerce Platform',
     description:
