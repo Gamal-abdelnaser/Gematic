@@ -171,13 +171,13 @@ const HeroSection = () => {
               </motion.div> */}
               
               {/* Another Floating Element */}
-              <motion.div
+              {/* <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                 className="absolute -left-4 bottom-12 px-4 py-2 rounded-xl bg-primary text-primary-foreground text-sm font-medium shadow-glow"
               >
                 3+ Years Exp
-              </motion.div>
+              </motion.div> */}
             </div>
           </motion.div>
         </div>
