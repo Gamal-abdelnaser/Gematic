@@ -1,5 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import photo from '../assets/branding.png'
 
 const skillCategories = [
   {
@@ -57,8 +58,19 @@ const SkillsSection = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="skills" className="py-24 lg:py-32 section-light">
-      <div className="section-container" ref={ref}>
+    <section id="skills" className="py-24 lg:py-32 relative section-light">
+      <div className="absolute inset-0 ">
+        {/* الصورة */}
+        <img
+          src={photo}
+          alt=""
+          className="object-cover w-full h-full"
+        />
+
+        {/* اللير الأسود */}
+        <div className="absolute inset-0 bg-black/80"></div>
+      </div>
+      <div className="section-container relative" ref={ref}>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -69,7 +81,7 @@ const SkillsSection = () => {
           <span className="text-sm font-medium text-primary mb-4 block">
             Skills & Expertise
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white">
             Technologies I{' '}
             <span className="gradient-text">work with</span>
           </h2>
@@ -125,7 +137,7 @@ const SkillsSection = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-center"
         >
-          <h3 className="text-lg font-semibold mb-6">Soft Skills</h3>
+          <h3 className="text-lg font-semibold mb-6 text-white">Soft Skills</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {softSkills.map((skill, index) => (
               <motion.span

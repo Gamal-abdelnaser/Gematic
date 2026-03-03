@@ -8,6 +8,7 @@ import { useToast } from '@/hooks/use-toast';
 import { FaGithub, FaTiktok } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import photo from '../assets/branding.png'
 
 // 
 
@@ -48,8 +49,19 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 lg:py-32  section-light">
-      <div className="section-container" ref={ref}>
+    <section id="contact" className="py-24 lg:py-32 relative section-light">
+      <div className="absolute inset-0 ">
+        {/* الصورة */}
+        <img
+          src={photo}
+          alt=""
+          className="object-cover w-full h-full"
+        />
+
+        {/* اللير الأسود */}
+        <div className="absolute inset-0 bg-black/80"></div>
+      </div>
+      <div className="section-container relative text-white" ref={ref}>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -64,7 +76,7 @@ const ContactSection = () => {
             Let's work{' '}
             <span className="gradient-text">together</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-white/70 max-w-2xl mx-auto">
             Have a project in mind or just want to chat? I'd love to hear from you.
             Fill out the form below and I'll get back to you as soon as possible.
           </p>
@@ -77,8 +89,8 @@ const ContactSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-            <p className="text-muted-foreground mb-8">
+            <h3 className="text-2xl  font-bold text-primary mb-6">Contact Information</h3>
+            <p className="text-white/70 mb-8">
               I'm currently available for freelance work and full-time positions.
               If you have a project that needs some creative touch, I'd love to
               hear about it.
@@ -91,7 +103,7 @@ const ContactSection = () => {
                   <Mail className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Email</p>
+                  <p className="text-sm font-bold text-primary">Email</p>
                   <a
                     href="mailto:hello@developer.com"
                     className="font-medium hover:text-primary transition-colors"
@@ -113,7 +125,7 @@ const ContactSection = () => {
 
             {/* Social Links */}
             <div>
-              <p className="text-sm text-muted-foreground mb-4">
+              <p className="text-sm font-bold text-primary mb-4">
                 Connect with me
               </p>
               <div className="flex gap-3">
@@ -136,7 +148,7 @@ const ContactSection = () => {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1, y: -2 }}
                       whileTap={{ scale: 0.95 }}
-                      className="p-3 rounded-full bg-white text-foreground hover:bg-secondary/80 transition-colors"
+                      className="p-3 rounded-full bg-white text-foreground hover:bg-primary/80 transition-colors"
                       aria-label={social.label}
                     >
                       {social.icon}

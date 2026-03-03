@@ -8,7 +8,31 @@ import modivo from "../assets/modivo.png"
 import calculator from "../assets/calculator.png"
 import elevate from "../assets/elevate.png"
 import beshwy from "../assets/beshoy.png"
+import boffi from '../assets/boffi.png'
+import mano from '../assets/mano.png'
+import photo from '../assets/branding.png'
+
 const projects = [
+  {
+    title: 'Manoo Tariq',
+    description:
+      'A modern fitness platform designed for gyms and coaches, featuring multiple sports programs, subscription plans, smart fitness calculators, and an admin dashboard. Built with a focus on performance, scalability, and clean user experience.',
+    image: mano, // غير الاسم حسب الصورة عندك
+    tags: ['Next js', 'TypeScript', 'Tailwind', 'shadcn/ui', 'Framer Motion'],
+    liveUrl: 'https://manootariq.com',
+    githubUrl: '',
+    featured: true,
+  },
+  {
+    title: 'Boffi Lift',
+    description:
+      'A modern fitness platform designed for gyms and coaches, featuring multiple sports programs, subscription plans, smart fitness calculators, and an admin dashboard. Built with a focus on performance, scalability, and clean user experience.',
+    image: boffi, // غير الاسم حسب الصورة عندك
+    tags: ['Next js', 'TypeScript', 'Tailwind', 'shadcn/ui', 'Framer Motion'],
+    liveUrl: 'https://boffilift.com',
+    githubUrl: '',
+    featured: true,
+  },
   {
     title: 'Elevate Fitness Platform',
     description:
@@ -30,26 +54,26 @@ const projects = [
     githubUrl: 'https://github.com/Gamal-abdelnaser/AliFit',
     featured: false,
   },
-  {
-    title: 'Gymnastic App',
-    description:
-      'A fitness-focused web application designed for gymnastic training programs, featuring workout planning, progress visualization, and a mobile-first responsive layout.',
-    image: gymnastic,
-    tags: ['React', 'Tailwind CSS', 'UI/UX Design'],
-    liveUrl: 'https://gymnasticc.netlify.app/',
-    githubUrl: 'https://github.com/Gamal-abdelnaser/gymnastic',
-    featured: false,
-  },
-  {
-    title: 'Investment Calculator',
-    description:
-      'A responsive financial calculator that helps users estimate investment growth based on different inputs. Built with a focus on accuracy, performance, and clear data visualization.',
-    image: calculator,
-    tags: ['React', 'JavaScript', 'Financial Logic'],
-    liveUrl: 'https://investment-app-calculator.netlify.app/',
-    githubUrl: 'https://github.com/Gamal-abdelnaser/investment-calculator',
-    featured: true,
-  },
+  // {
+  //   title: 'Gymnastic App',
+  //   description:
+  //     'A fitness-focused web application designed for gymnastic training programs, featuring workout planning, progress visualization, and a mobile-first responsive layout.',
+  //   image: gymnastic,
+  //   tags: ['React', 'Tailwind CSS', 'UI/UX Design'],
+  //   liveUrl: 'https://gymnasticc.netlify.app/',
+  //   githubUrl: 'https://github.com/Gamal-abdelnaser/gymnastic',
+  //   featured: false,
+  // },
+  // {
+  //   title: 'Investment Calculator',
+  //   description:
+  //     'A responsive financial calculator that helps users estimate investment growth based on different inputs. Built with a focus on accuracy, performance, and clear data visualization.',
+  //   image: calculator,
+  //   tags: ['React', 'JavaScript', 'Financial Logic'],
+  //   liveUrl: 'https://investment-app-calculator.netlify.app/',
+  //   githubUrl: 'https://github.com/Gamal-abdelnaser/investment-calculator',
+  //   featured: true,
+  // },
   {
     title: 'Beshwy – Graphic Design Portfolio',
     description:
@@ -71,29 +95,7 @@ const projects = [
     githubUrl: 'https://github.com/Gamal-abdelnaser/modivo',
     featured: true,
   },
-  
 
- 
-  // {
-  //   title: 'Weather Dashboard',
-  //   description:
-  //     'A beautiful weather application with location-based forecasts, interactive maps, and severe weather alerts.',
-  //   image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=500&fit=crop',
-  //   tags: ['Vue.js', 'OpenWeather API', 'Mapbox'],
-  //   liveUrl: 'https://example.com',
-  //   githubUrl: 'https://github.com',
-  //   featured: false,
-  // },
-  // {
-  //   title: 'Portfolio Generator',
-  //   description:
-  //     'A tool that helps developers create stunning portfolios in minutes with customizable themes and easy deployment.',
-  //   image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop',
-  //   tags: ['React', 'Node.js', 'Puppeteer'],
-  //   liveUrl: 'https://example.com',
-  //   githubUrl: 'https://github.com',
-  //   featured: false,
-  // },
 ];
 
 const ProjectCard = ({
@@ -109,16 +111,28 @@ const ProjectCard = ({
     initial={{ opacity: 0, y: 50 }}
     animate={isInView ? { opacity: 1, y: 0 } : {}}
     transition={{ duration: 0.5, delay: index * 0.1 }}
-    className={`group relative rounded-2xl overflow-hidden bg-card border border-border shadow-soft hover:shadow-medium transition-all ${
+    className={`group relative rounded-2xl overflow-hidden  border border-border shadow-soft hover:shadow-medium transition-all ${
       project.featured ? 'md:col-span-1' : ''
     }`}
   >
+    <div className="absolute inset-0 ">
+      {/* الصورة */}
+      <img
+        src={photo}
+        alt=""
+        className="object-cover w-full h-full"
+      />
+
+      {/* اللير الأسود */}
+      <div className="absolute inset-0 bg-black/80"></div>
+    </div>
     {/* Image */}
-    <div className="relative h-48 lg:h-56 overflow-hidden">
+    <div className="relative h-fit lg:h-fit overflow-hidden">
+      
       <img
         src={project.image}
         alt={project.title}
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
         loading="lazy"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -136,7 +150,7 @@ const ProjectCard = ({
         >
           <ExternalLink size={18} />
         </motion.a>
-        <motion.a
+        {/* <motion.a
           href={project.githubUrl}
           target="_blank"
           rel="noopener noreferrer"
@@ -146,19 +160,19 @@ const ProjectCard = ({
           aria-label="View source code"
         >
           <Github size={18} />
-        </motion.a>
+        </motion.a> */}
       </div>
     </div>
 
     {/* Content */}
-    <div className="p-6">
+    <div className="p-6 relative">
       <div className="flex items-start justify-between gap-4 mb-3">
-        <h3 className="text-lg font-semibold group-hover:text-primary transition-colors">
+        <h3 className="text-lg font-semibold group-hover:text-primary transition-colors gradient-text" >
           {project.title}
         </h3>
         <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
       </div>
-      <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+      <p className="text-sm text-white/70 mb-4 line-clamp-2">
         {project.description}
       </p>
       <div className="flex flex-wrap gap-2">
@@ -180,7 +194,8 @@ const ProjectsSection = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="projects" className="py-24 lg:py-32 section-dark">
+    <section id="projects" className="py-24 lg:py-32 section-white">
+      
       <div className="section-container" ref={ref}>
         {/* Header */}
         <motion.div
@@ -207,7 +222,7 @@ const ProjectsSection = () => {
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8">
           {projects.map((project, index) => (
             <ProjectCard
               key={project.title}

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Code2, Lightbulb, Rocket, Users } from 'lucide-react';
+import photo from '../assets/branding.png'
 
 const highlights = [
   {
@@ -31,9 +32,20 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="about" className="py-24 lg:py-32 relative section-dark">
-      <div className="section-container" ref={ref}>
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <section id="about" className="py-24 lg:py-32 relative bg-white ">
+      {/* <div className="absolute inset-0 ">
+        <img
+          src={photo}
+          alt=""
+          className="object-cover w-full h-full"
+        />
+
+        <div className="absolute inset-0 bg-black/80"></div>
+      </div> */}
+
+      <div className="section-container relative" ref={ref}>
+        
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center ">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -49,17 +61,17 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                I'm a Frontend Developer with 3+ years of experience building modern web 
-                applications. My journey started with curiosity about how websites work, 
+                I'm a Frontend Developer with 3+ years of experience building modern web
+                applications. My journey started with curiosity about how websites work,
                 and evolved into a deep passion for creating intuitive user experiences.
               </p>
               <p>
-                I specialize in React and javascript. I believe great software is built at the intersection of 
+                I specialize in React and javascript. I believe great software is built at the intersection of
                 clean code and thoughtful design.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new technologies, 
-                contributing to open-source projects, or sharing knowledge through 
+                When I'm not coding, you'll find me exploring new technologies,
+                contributing to open-source projects, or sharing knowledge through
                 technical writing.
               </p>
             </div>

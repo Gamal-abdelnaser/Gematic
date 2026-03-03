@@ -11,7 +11,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="py-8 border-t border-border section-dark">
+    <footer className="py-8 border-t border-border bg-black/95">
       <div className="section-container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Logo & Copyright */}
@@ -41,7 +41,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="p-3 rounded-full bg-white text-foreground hover:bg-secondary/80 transition-colors"
+                className="p-3 rounded-full bg-white text-foreground hover:text-white hover:bg-primary/80 transition-colors"
                 aria-label={social.label}
               >
                 {social.icon}

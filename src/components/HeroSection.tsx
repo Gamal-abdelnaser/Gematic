@@ -4,14 +4,26 @@ import { FaGithub, FaTiktok } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
+import photo from '../assets/branding.png'
+
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/gamal.png';
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden section-light py-14">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden section-light py-14 bg-black border-b-2">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-[var(--gradient-hero)]" />
-      
+      <div className="absolute inset-0 ">
+        {/* الصورة */}
+        <img
+          src={photo}
+          alt=""
+          className="object-cover w-full h-full"
+        />
+
+        {/* اللير الأسود */}
+        <div className="absolute inset-0 bg-black/80"></div>
+      </div>
+
       {/* Animated Glow Effects */}
       <motion.div
         className="hero-glow top-1/4 -left-32"
@@ -39,7 +51,7 @@ const HeroSection = () => {
       />
 
       {/* Grid Pattern */}
-      <div 
+      <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px),
@@ -74,7 +86,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-6"
+              className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-6 text-white"
             >
               Frontend Developer building{' '}
               <span className="gradient-text">modern, high-performance</span>{' '}
@@ -88,7 +100,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg sm:text-xl text-muted-foreground max-w-2xl lg:max-w-none mb-10 text-balance"
             >
-              I craft beautiful, responsive interfaces that users love. Passionate about 
+              I craft beautiful, responsive interfaces that users love. Passionate about
               clean code, intuitive design, and turning complex problems into elegant solutions.
             </motion.p>
 
@@ -121,7 +133,7 @@ const HeroSection = () => {
                 { icon: <FaGithub size={30} />, href: 'https://github.com/Gamal-abdelnaser', label: 'GitHub' },
                 { icon: <FaLinkedin size={30} />, href: 'https://www.linkedin.com/in/gamal-abdelnaser-2b9b38311/', label: 'LinkedIn' },
                 { icon: <FaInstagram size={30} />, href: 'https://www.instagram.com/gematic2/', label: 'intagram' },
-                 { icon: <FaTiktok size={30} />, href: 'https://www.tiktok.com/@gamatic2', label: 'tiktok' },
+                { icon: <FaTiktok size={30} />, href: 'https://www.tiktok.com/@gamatic2', label: 'tiktok' },
               ].map((social) => (
                 <motion.a
                   key={social.label}
@@ -130,7 +142,7 @@ const HeroSection = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="p-3 rounded-full bg-secondary text-foreground  hover:text-muted-foreground hover:bg-secondary/80 transition-colors"
+                  className="p-3 rounded-full bg-secondary text-foreground  hover:text-white hover:bg-primary/80 transition-colors"
                   aria-label={social.label}
                 >
                   {social.icon}
@@ -150,7 +162,7 @@ const HeroSection = () => {
               {/* Decorative Ring */}
               <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-primary/20 to-primary/5 blur-2xl" />
               <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-primary to-primary/50 opacity-20" />
-              
+
               {/* Photo Container */}
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-background shadow-strong">
                 {/* Placeholder - Replace with your photo */}
@@ -160,7 +172,7 @@ const HeroSection = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              
+
               {/* Floating Badge */}
               {/* <motion.div
                 animate={{ y: [0, -10, 0] }}
@@ -169,7 +181,7 @@ const HeroSection = () => {
               >
                 <span className="text-2xl">👋</span>
               </motion.div> */}
-              
+
               {/* Another Floating Element */}
               {/* <motion.div
                 animate={{ y: [0, 10, 0] }}
