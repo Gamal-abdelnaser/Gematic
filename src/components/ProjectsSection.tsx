@@ -111,7 +111,7 @@ const ProjectCard = ({
     initial={{ opacity: 0, y: 50 }}
     animate={isInView ? { opacity: 1, y: 0 } : {}}
     transition={{ duration: 0.5, delay: index * 0.1 }}
-    className={`group relative rounded-2xl overflow-hidden  border border-border shadow-soft hover:shadow-medium transition-all ${
+    className={`group relative rounded-2xl overflow-hidden bg-black  border border-border shadow-soft hover:shadow-medium transition-all ${
       project.featured ? 'md:col-span-1' : ''
     }`}
   >
@@ -127,7 +127,7 @@ const ProjectCard = ({
       <div className="absolute inset-0 bg-black/80"></div>
     </div>
     {/* Image */}
-    <div className="relative h-fit lg:h-fit overflow-hidden">
+    <div className="relative h-fit lg:h-fit overflow-hidden ">
       
       <img
         src={project.image}
@@ -194,7 +194,7 @@ const ProjectsSection = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="projects" className="py-24 lg:py-32 section-white">
+    <section id="projects" className="py-24 lg:py-32 section-white bg-black ">
       
       <div className="section-container" ref={ref}>
         {/* Header */}
@@ -208,12 +208,12 @@ const ProjectsSection = () => {
             <span className="text-sm font-medium text-primary mb-4 block">
               Featured Work
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2">
               Projects I've{' '}
               <span className="gradient-text">built</span>
             </h2>
           </div>
-          <Button variant="outline" asChild >
+          <Button variant="default" asChild >
             <a href="https://github.com/Gamal-abdelnaser" target="_blank" rel="noopener noreferrer" className='bg-primary hover:bg-slate-800'>
               View All on GitHub
               <ArrowUpRight className="ml-2 h-4 w-4" />

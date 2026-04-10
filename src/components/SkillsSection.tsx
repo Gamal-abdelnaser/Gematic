@@ -61,14 +61,14 @@ const SkillsSection = () => {
     <section id="skills" className="py-24 lg:py-32 relative section-light">
       <div className="absolute inset-0 ">
         {/* الصورة */}
-        <img
+        {/* <img
           src={photo}
           alt=""
           className="object-cover w-full h-full"
-        />
+        /> */}
 
         {/* اللير الأسود */}
-        <div className="absolute inset-0 bg-black/80"></div>
+        <div className="absolute inset-0 bg-black"></div>
       </div>
       <div className="section-container relative" ref={ref}>
         {/* Header */}

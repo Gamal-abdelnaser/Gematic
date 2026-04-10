@@ -32,16 +32,16 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="about" className="py-24 lg:py-32 relative bg-white ">
-      {/* <div className="absolute inset-0 ">
-        <img
+    <section id="about" className="py-24 lg:py-32 relative bg-black"> 
+       <div className="absolute inset-0 ">
+        {/* <img
           src={photo}
           alt=""
           className="object-cover w-full h-full"
-        />
+        /> */}
 
         <div className="absolute inset-0 bg-black/80"></div>
-      </div> */}
+      </div> 
 
       <div className="section-container relative" ref={ref}>
         
@@ -55,7 +55,7 @@ const AboutSection = () => {
             <span className="text-sm font-medium text-primary mb-4 block">
               About Me
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-3xl text-black sm:text-4xl lg:text-5xl font-bold mb-6">
               Crafting digital experiences with{' '}
               <span className="gradient-text">precision & passion</span>
             </h2>

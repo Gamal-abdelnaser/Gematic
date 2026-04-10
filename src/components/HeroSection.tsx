@@ -7,21 +7,21 @@ import { FaInstagram } from "react-icons/fa";
 import photo from '../assets/branding.png'
 
 import { Button } from '@/components/ui/button';
-import heroImage from '@/assets/gamal.png';
+import heroImage from '@/assets/circle_logo.png';
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden section-light py-14 bg-black border-b-2">
       {/* Background Elements */}
-      <div className="absolute inset-0 ">
+      <div className="absolute inset-0 bg-black">
         {/* الصورة */}
-        <img
+        {/* <img
           src={photo}
           alt=""
           className="object-cover w-full h-full"
-        />
+        /> */}
 
         {/* اللير الأسود */}
-        <div className="absolute inset-0 bg-black/80"></div>
+        {/* <div className="absolute inset-0 bg-black/80"></div> */}
       </div>
 
       {/* Animated Glow Effects */}
@@ -164,12 +164,12 @@ const HeroSection = () => {
               <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-primary to-primary/50 opacity-20" />
 
               {/* Photo Container */}
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-background shadow-strong">
+              <div className="relative w-96 flex rounded-full  border-4 border-background shadow-strong overflow-hidden">
                 {/* Placeholder - Replace with your photo */}
                 <img
                   src={heroImage}
                   alt="Profile photo"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
 
