@@ -132,7 +132,7 @@ const HeroSection = () => {
               {[
                 { icon: <FaGithub size={30} />, href: 'https://github.com/Gamal-abdelnaser', label: 'GitHub' },
                 { icon: <FaLinkedin size={30} />, href: 'https://www.linkedin.com/in/gamal-abdelnaser-2b9b38311/', label: 'LinkedIn' },
-                { icon: <FaInstagram size={30} />, href: 'https://www.instagram.com/gematic2/', label: 'intagram' },
+                { icon: <FaInstagram size={30} />, href: 'https://www.instagram.com/gematicc/', label: 'intagram' },
                 { icon: <FaTiktok size={30} />, href: 'https://www.tiktok.com/@gamatic2', label: 'tiktok' },
               ].map((social) => (
                 <motion.a
